@@ -20,28 +20,6 @@ namespace ThreadPull
             }
         }
 
-        //public static void DoWork(object state)
-        //{
-        //    var threadNo = Thread.CurrentThread.ManagedThreadId;
-        //    Console.SetCursorPosition(0, threadNo - 1);
-        //    Console.Write($"Thread {threadNo,2}:");
-        //    var rndDelimiter = new Random().Next(0, delimiters.Length - 1);
-        //    var rndSleep = new Random().Next(100, 5000);
-        //    var delimiter = delimiters[rndDelimiter];
-
-        //    while (true)
-        //    {
-        //        Console.CursorVisible = false;
-        //        Console.SetCursorPosition(10, threadNo - 1);
-        //        lock (Console.Out)
-        //        {
-        //            Console.Write(delimiter);
-        //        }
-        //        Thread.Sleep(rndSleep);
-        //    }
-        //}
-
-
         static void DoWork(object state)
         {
             var threadNo = threadOutputs.Count + 1; // +1 for the first line (Press n to start a thread!)
